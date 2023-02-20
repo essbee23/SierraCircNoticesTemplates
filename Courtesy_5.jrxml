@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Overdue" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d4ce732f-4f5d-48a2-9d6a-8331f4108dc8">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<field name="Item_Title" class="java.lang.String">
+		<fieldDescription><![CDATA[v_b_title]]></fieldDescription>
+	</field>
+	<field name="Item_Author" class="java.lang.String">
+		<fieldDescription><![CDATA[v_b_author]]></fieldDescription>
+	</field>
+	<field name="Item_Publisher" class="java.lang.String">
+		<fieldDescription><![CDATA[v_b_pub]]></fieldDescription>
+	</field>
+	<field name="Item_Bib_Record_Id" class="java.lang.String">
+		<fieldDescription><![CDATA[bib_recid]]></fieldDescription>
+	</field>
+	<field name="Item_Edition" class="java.lang.String">
+		<fieldDescription><![CDATA[v_edition]]></fieldDescription>
+	</field>
+	<field name="Library_Address_Line1_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_return_addr1]]></fieldDescription>
+	</field>
+	<field name="Library_Address_Line2_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_return_addr2]]></fieldDescription>
+	</field>
+	<field name="Library_Address_Line3_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_return_addr3]]></fieldDescription>
+	</field>
+	<field name="Library_Address_Line4_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_return_addr4]]></fieldDescription>
+	</field>
+	<field name="Patron_Name_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_name]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line1_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_patron_addr1]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line2_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_patron_addr2]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line3_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_patron_addr3]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line4_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_patron_addr4]]></fieldDescription>
+	</field>
+	<field name="Item_Barcode" class="java.lang.String">
+		<fieldDescription><![CDATA[v_i_barcode]]></fieldDescription>
+	</field>
+	<field name="Item_Due_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_duedate]]></fieldDescription>
+	</field>
+	<field name="Item_Location" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_location]]></fieldDescription>
+	</field>
+	<field name="Item_Call_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[v_call_num]]></fieldDescription>
+	</field>
+	<field name="Item_ID" class="java.lang.String">
+		<fieldDescription><![CDATA[@id]]></fieldDescription>
+	</field>
+	<field name="Item_Checked_Out_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_checkout_date]]></fieldDescription>
+	</field>
+	<field name="Text_Number_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_msg_num]]></fieldDescription>
+	</field>
+	<field name="Item_Record_Id" class="java.lang.String">
+		<fieldDescription><![CDATA[item_recid]]></fieldDescription>
+	</field>
+	<field name="Patron_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_name]]></fieldDescription>
+	</field>
+	<field name="Item_Location_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_i_location]]></fieldDescription>
+	</field>
+	<field name="Patron_Type" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_ptype]]></fieldDescription>
+	</field>
+	<field name="Patron_Phone_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_phone]]></fieldDescription>
+	</field>
+	<field name="Patron_Phone_Number_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_phone]]></fieldDescription>
+	</field>
+	<field name="Patron_Record_ID_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/patron_recid]]></fieldDescription>
+	</field>
+	<field name="Patron_Phone2_Number_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_phone2]]></fieldDescription>
+	</field>
+	<field name="Patron_Phone2_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_phone2]]></fieldDescription>
+	</field>
+	<field name="Patron_Barcode_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_barcode]]></fieldDescription>
+	</field>
+	<field name="Patron_Barcode" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_barcode]]></fieldDescription>
+	</field>
+	<field name="Patron_Code1_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_pcode1]]></fieldDescription>
+	</field>
+	<field name="Patron_Code2_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_pcode2]]></fieldDescription>
+	</field>
+	<field name="Patron_Code3_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_pcode3]]></fieldDescription>
+	</field>
+	<field name="Patron_Code4_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_pcode4]]></fieldDescription>
+	</field>
+	<field name="Patron_Message_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_msg]]></fieldDescription>
+	</field>
+	<field name="Patron_Agency_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_agency]]></fieldDescription>
+	</field>
+	<field name="Patron_Home_Library_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_home_lib]]></fieldDescription>
+	</field>
+	<field name="Patron_Checked_Out_Number_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_cur_chkout]]></fieldDescription>
+	</field>
+	<field name="Patron_Type_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_ptype]]></fieldDescription>
+	</field>
+	<field name="Item_Checked_Out_Location" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_outloc]]></fieldDescription>
+	</field>
+	<field name="Item_Volume" class="java.lang.String">
+		<fieldDescription><![CDATA[v_vol]]></fieldDescription>
+	</field>
+	<field name="Item_Code1" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_scat]]></fieldDescription>
+	</field>
+	<field name="Item_Code2" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_icode]]></fieldDescription>
+	</field>
+	<field name="Item_Type" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_i_type]]></fieldDescription>
+	</field>
+	<field name="Item_Material_Type" class="java.lang.String">
+		<fieldDescription><![CDATA[f_b_bcode2]]></fieldDescription>
+	</field>
+	<field name="Item_OPAC_Message" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_opacmsg]]></fieldDescription>
+	</field>
+	<field name="Item_Agency" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_agency]]></fieldDescription>
+	</field>
+	<field name="Item_Note" class="java.lang.String">
+		<fieldDescription><![CDATA[v_i_note]]></fieldDescription>
+	</field>
+	<field name="Item_Message" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_message]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line1" class="java.lang.String">
+		<fieldDescription><![CDATA[g_patron_addr1]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line2" class="java.lang.String">
+		<fieldDescription><![CDATA[g_patron_addr2]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line3" class="java.lang.String">
+		<fieldDescription><![CDATA[g_patron_addr3]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line4" class="java.lang.String">
+		<fieldDescription><![CDATA[g_patron_addr4]]></fieldDescription>
+	</field>
+	<field name="Patron_Code1" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_pcode1]]></fieldDescription>
+	</field>
+	<field name="Patron_Code2" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_pcode2]]></fieldDescription>
+	</field>
+	<field name="Patron_Code3" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_pcode3]]></fieldDescription>
+	</field>
+	<field name="Patron_Code4" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_pcode4]]></fieldDescription>
+	</field>
+	<field name="Patron_Home_Library" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_home_lib]]></fieldDescription>
+	</field>
+	<field name="Patron_Record_ID" class="java.lang.String">
+		<fieldDescription><![CDATA[patron_recid]]></fieldDescription>
+	</field>
+	<field name="Patron_Message" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_msg]]></fieldDescription>
+	</field>
+	<field name="Patron_Agency" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_agency]]></fieldDescription>
+	</field>
+	<field name="Patron_Checked_Out_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_cur_chkout]]></fieldDescription>
+	</field>
+	<field name="Item_Total_Checkout" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_out_stat]]></fieldDescription>
+	</field>
+	<field name="Item_Last_Checkin" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_lchkin]]></fieldDescription>
+	</field>
+	<field name="Item_In_Location" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_inloc]]></fieldDescription>
+	</field>
+	<field name="Item_Publish_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[v_b_pub_date]]></fieldDescription>
+	</field>
+	<field name="Total_Patron_Fines_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_moneyowed]]></fieldDescription>
+	</field>
+	<field name="Print_Sequence_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/print_sequence]]></fieldDescription>
+	</field>
+	<field name="Message_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_msg]]></fieldDescription>
+	</field>
+	<field name="Message_Patron" class="java.lang.String">
+		<fieldDescription><![CDATA[s_msg_patron]]></fieldDescription>
+	</field>
+	<field name="Message_Patron_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/s_msg_patron]]></fieldDescription>
+	</field>
+	<field name="Patron_Notice_Pref_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_notice_pref]]></fieldDescription>
+	</field>
+	<field name="Patron_Mobile_Number_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_mobile_number]]></fieldDescription>
+	</field>
+	<field name="Item_Auto_Renewal_Status" class="java.lang.String">
+		<fieldDescription><![CDATA[v_i_autorenewal_status]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="351" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="140" width="380" height="46" uuid="1270e64b-d1bd-49a8-ab8e-3bfda35c4546">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" mode="Opaque" x="0" y="-10" width="569" height="62" backcolor="rgba(85, 133, 181, 0.9411765)" uuid="e362911f-2a6f-4ba1-9fed-b393e1ce128f"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-23" x="240" y="-5" width="301" height="52" isPrintWhenDetailOverflows="true" backcolor="rgba(85, 133, 181, 0.9411765)" uuid="16c4fa44-d461-4f8d-826c-47fa46c91e7e"/>
+				<box>
+					<pen lineWidth="4.5"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Castellar" size="19" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Courtesy Notice]]></text>
+			</staticText>
+			<image vAlign="Middle">
+				<reportElement x="14" y="0" width="211" height="42" uuid="b6c7e0d0-2be3-4a86-922c-9504d23007ef">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA["https://library.unc.edu/wp-content/themes/responsiveUNCLib/images/UniversityLibraries_logo_white_h.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="0" y="230" width="72" height="20" uuid="e7dda404-7aca-446a-ad77-8ec2456236a0">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TITLE:"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement key="textField-30" positionType="Float" x="79" y="230" width="492" height="20" uuid="3798f2d8-3b7b-4003-9cad-22b443706802">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Title}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="0" y="260" width="72" height="20" uuid="e49c8eea-7bd5-4fd3-acab-24dff1e43f05">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CALL #"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="0" y="287" width="77" height="20" uuid="8af10f57-7fd8-4655-bd09-2526e72025d8">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["BARCODE:"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement key="textField-27" positionType="Float" x="79" y="260" width="207" height="20" uuid="cf34587c-4979-40a6-bfaf-587d76fd847a">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Call_Number}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement key="textField-28" positionType="Float" x="79" y="287" width="160" height="20" uuid="5c514177-c792-41b4-9694-4df2fd4f1430">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Barcode}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="279" y="287" width="101" height="20" uuid="c4a1c4a7-ed9d-45cc-b07a-14d5f98e7587">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DUE DATE:"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement key="textField-42" positionType="Float" x="378" y="287" width="193" height="30" forecolor="#000000" uuid="48ef89e0-1080-4488-92d1-21c77abedc74">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="18" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Due_Date}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="MM/dd/yyyy" isBlankWhenNull="false">
+				<reportElement key="textField" x="1" y="70" width="229" height="28" uuid="76e59640-1127-4b65-a56d-8a19d70db66f">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-24" x="1" y="90" width="285" height="22" uuid="4069dced-1c5e-4bb3-9b09-988c3de5ec6b">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Library_Address_Line1_C}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="Reference">
+				<reportElement x="1" y="110" width="239" height="20" forecolor="#0033FF" uuid="1e8194bf-bbf7-4571-a02f-710e70158add">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Contact us via chat, email, or phone"]]></textFieldExpression>
+				<hyperlinkReferenceExpression><![CDATA["https://library.unc.edu/ask/"]]></hyperlinkReferenceExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="160" width="28" height="20" uuid="d0cc66ba-f927-40b7-9c76-762b70efa3ba">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[To:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField-2" x="30" y="160" width="279" height="22" uuid="0e031b44-af98-47a7-9258-3adf7403383d">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Patron_Name_C}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="180" width="380" height="46" uuid="8bb5712b-f60c-4f1d-ac3b-9a3d24ac03dc">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[The items below are due soon. They were renewed if possible. Check your account at ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="378" y="320" width="193" height="21" forecolor="#228B22" uuid="5a50ba8e-8870-4450-b77f-6a249800e96d">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Auto_Renewal_Status}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="Reference">
+				<reportElement x="205" y="196" width="81" height="20" forecolor="#0033FF" uuid="4138e20a-a911-4b90-87f3-a011901236ee">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["My Library"]]></textFieldExpression>
+				<hyperlinkReferenceExpression><![CDATA["https://webcat.lib.unc.edu/patroninfo/"]]></hyperlinkReferenceExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="8" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="112" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="29" splitType="Stretch"/>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
